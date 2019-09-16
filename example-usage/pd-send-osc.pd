@@ -1,4 +1,4 @@
-#N canvas 645 157 365 259 10;
+#N canvas 645 157 522 259 10;
 #X obj 53 168 sendOSC;
 #X msg 71 124 disconnect;
 #X msg 53 100 connect localhost 12370;
@@ -10,6 +10,10 @@
 -1;
 #X obj 55 57 t b b;
 #X msg 210 141 send /bang;
+#X obj 340 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 340 93 Press to close Watchdog;
+#X msg 339 145 send /exit;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 6 0;
@@ -19,3 +23,5 @@
 #X connect 7 0 4 0;
 #X connect 7 1 2 0;
 #X connect 8 0 0 0;
+#X connect 9 0 11 0;
+#X connect 11 0 0 0;

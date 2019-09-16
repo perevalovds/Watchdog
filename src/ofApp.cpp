@@ -23,7 +23,9 @@ void ofApp::setup(){
 		wait_time_ = ofToFloat(ARGS[2]);
 	}
 	cout << "oscPortIn=" << port_ << ", waitSec=" << wait_time_ << endl;
-	cout << "Now we opening port " << port_ << " for listening. If program crashes, it means that port is busy by another application, so change the port in settings.ini..." << endl;
+	cout << "Now we opening port " << port_ << " for listening. If program crashes," 
+	<< endl
+	<< "it means that port is busy by another application, so change the port by command line argument..." << endl;
 	osc_receiver_.setup(port_);
 }
 
