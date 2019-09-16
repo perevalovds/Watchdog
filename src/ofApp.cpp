@@ -37,7 +37,9 @@ void ofApp::update(){
 		ofxOscMessage m;
 		osc_receiver_.getNextMessage(m);
 		received = true;
-		if (m.getAddress() == "/exit") {
+		string address = m.getAddress();
+		//cout << endl << "message " << address << endl;
+		if (address == "/exit") {
 			cout << "Watchdog received /exit signal, so exit without restarting" << endl;
 			OF_EXIT_APP(1);
 		}
