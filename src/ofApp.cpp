@@ -10,8 +10,11 @@ void ofApp::setup(){
 	cout << "Program listen OSC messages. If no message arrived at given seconds," << endl;
 	cout << "it closes (and normally causes restart due BAT file you are prepared" << endl;
 	cout << "NOTE:  OSC message '/exit' causes exit code 1 - it's signal not to restart" << endl;
-	cout << "Press Esc to close program" << endl;
+	//cout << "Press Esc to close program" << endl;
 	cout << "----------------------------------------------" << endl;
+
+	//Disabling ESC because it is sent to other oF apps!!!
+	ofSetEscapeQuitsApp(false);	
 
 	port_ = 12370;
 	wait_time_ = 10;
