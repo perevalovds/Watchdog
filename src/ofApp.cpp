@@ -5,10 +5,10 @@ extern vector<string> ARGS;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	cout << "----------------------------------------------" << endl;
-	cout << "WatchDog 1.1 by Denis Perevalov, eamuseum.com" << endl;
+	cout << "WatchDog 1.2 by Denis Perevalov, Digital Vitality Studio" << endl;
 	cout << "command line has two arguments: OSC port and wait time" << endl;
 	cout << "Program listen OSC messages. If no message arrived at given seconds," << endl;
-	cout << "it closes (and normally causes restart dua BAT file you are prepared" << endl;
+	cout << "it closes (and normally causes restart due BAT file you are prepared" << endl;
 	cout << "NOTE:  OSC message '/exit' causes exit code 1 - it's signal not to restart" << endl;
 	cout << "Press Esc to close program" << endl;
 	cout << "----------------------------------------------" << endl;
@@ -53,64 +53,10 @@ void ofApp::update(){
 		cout << "No OSC messages, Watchdog is exiting now (to restart your application)..." << endl;
 		ofExit(0);
 	}
+
+	int sleep_ms = 250;	//Time for sleeping (so FPS=4)
+	ofSleepMillis(sleep_ms);
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
 
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
-}
